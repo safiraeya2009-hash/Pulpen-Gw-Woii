@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cwjgr1uyrbdf4"]
+
+[ext_resource type="Script" uid="uid://cn5no57i43ry7" path="res://pengaturan.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://df8mmrp1xinuu" path="res://Scenes/NPC's/Npc_OfficeWorker/ChatGPT Image Sep 18, 2026, 10_21_13 AM.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://c8biohj1ko56l" path="res://button.gd" id="3_0hol4"]
+
+[node name="Node2D" type="Node2D" unique_id=1991882029]
+script = ExtResource("1_epypp")
+
+[node name="ChatGptImageSep18,2026,102113Am" type="Sprite2D" parent="." unique_id=1821357571]
+position = Vector2(319.99997, 181)
+scale = Vector2(0.4153646, 0.3486328)
+texture = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="ChatGptImageSep18,2026,102113Am" unique_id=1787539052]
+offset_left = -743.9246
+offset_top = 418.7787
+offset_right = -510.39484
+offset_bottom = 481.88232
+script = ExtResource("3_0hol4")

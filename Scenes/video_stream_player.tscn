@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://btpniec1nh777"]
+
+[ext_resource type="VideoStream" uid="uid://bjssxa2omdk0v" path="res://Art/Audio/gemini_generated_video_a125a574.ogv" id="1_s67f4"]
+[ext_resource type="Script" uid="uid://bp5g268y0iwgj" path="res://Scenes/video_stream_player.gd" id="2_3jghy"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" unique_id=416658355]
+texture_filter = 2
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 1288.0
+offset_bottom = 725.0
+stream = ExtResource("1_s67f4")
+volume_db = 23.999996
+autoplay = true
+expand = true
+script = ExtResource("2_3jghy")

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://c5br2sp88bhgx"]
+
+[ext_resource type="Script" uid="uid://cwksnm37kgn38" path="res://Scenes/NPC's/NPC_Secret/Nazuna.gd" id="1_ay7sq"]
+[ext_resource type="Texture2D" uid="uid://dmn433lbvmu8s" path="res://Scenes/NPC's/NPC_Secret/846086ca-3e1e-46e1-8560-7d26488a7031_removalai_preview.png" id="3_w7jyn"]
+[ext_resource type="LabelSettings" uid="uid://da8inon5cmt2r" path="res://Art/Fonts/pixelized_label.tres" id="4_gcutl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t56sl"]
+radius = 91.022
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6yr8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w7jyn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pxhik"]
+radius = 13.0
+
+[node name="NPC" type="Area2D" unique_id=1473676427 node_paths=PackedStringArray("speech")]
+script = ExtResource("1_ay7sq")
+speech = NodePath("CenterContainer/Label")
+line1 = Array[String](["Hello!", "Welcome!", "They don't pay me enough for this"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=759273447]
+shape = SubResource("CircleShape2D_t56sl")
+
+[node name="NPC" type="AnimatedSprite2D" parent="." unique_id=389440512]
+position = Vector2(-1, -2.000001)
+scale = Vector2(0.1274671, 0.08395833)
+sprite_frames = SubResource("SpriteFrames_l6yr8")
+autoplay = "default"
+frame_progress = 0.902569
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NPC" unique_id=1041513148]
+position = Vector2(7.845162, 23.821352)
+scale = Vector2(7.845162, 11.91067)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/StaticBody2D" unique_id=2060723544]
+position = Vector2(1, 5)
+shape = SubResource("CircleShape2D_pxhik")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=164758531]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.79
+anchor_right = 0.5
+offset_left = -143.0
+offset_top = -73.0
+offset_right = 161.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer" unique_id=936959250]
+layout_mode = 2
+text = "I talk to the player!"
+label_settings = ExtResource("4_gcutl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1650159619]
+offset_left = -32.0
+offset_top = -46.000004
+offset_right = 85.0
+offset_bottom = -15.000004
+scale = Vector2(0.6927617, 0.5930939)
+mouse_filter = 2
+
+[node name="Menerima" type="Button" parent="HBoxContainer" unique_id=831066742]
+layout_mode = 2
+text = "Terima"
+
+[node name="Menolak" type="Button" parent="HBoxContainer" unique_id=972157187]
+layout_mode = 2
+text = "Terima :P"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

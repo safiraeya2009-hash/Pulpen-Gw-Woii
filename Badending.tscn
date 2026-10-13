@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://gdbdr46h3l57"]
+
+[ext_resource type="Texture2D" uid="uid://bdmkkflcftmef" path="res://Scenes/Dimarahin.png" id="1_n3sat"]
+[ext_resource type="Script" uid="uid://c8biohj1ko56l" path="res://button.gd" id="2_da5m6"]
+[ext_resource type="AudioStream" uid="uid://bjp0pnvo5xv22" path="res://Scenes/frog-laughing-meme.mp3" id="3_k8h8n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n3sat"]
+font_size = 17
+font_color = Color(10.995142, 10.995142, 10.995142, 1)
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1722516350]
+
+[node name="Dimarahin" type="Sprite2D" parent="." unique_id=434110058]
+position = Vector2(575, 329.06418)
+scale = Vector2(0.68779904, 0.6877618)
+texture = ExtResource("1_n3sat")
+
+[node name="Label" type="Label" parent="." unique_id=1801844556]
+offset_left = 185.00002
+offset_top = 322.0
+offset_right = 541.0
+offset_bottom = 400.0
+scale = Vector2(2.295, 2.295)
+text = "KARENA PULPEN LU GAK KETEMU KETEMU, 
+AKHIRNYA LU DI MARAHIN 
+GURU LU OAWKOAWKOKWA"
+label_settings = SubResource("LabelSettings_n3sat")
+
+[node name="Button" type="Button" parent="." unique_id=309475560]
+offset_left = 462.0
+offset_top = 552.0
+offset_right = 576.0
+offset_bottom = 583.0
+scale = Vector2(1.96, 1.96)
+text = "ULANG GAME"
+script = ExtResource("2_da5m6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1156746118]
+stream = ExtResource("3_k8h8n")
+volume_db = 24.0
+autoplay = true

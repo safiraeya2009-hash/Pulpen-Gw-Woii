@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ssqu6e0icshs"]
+
+[ext_resource type="VideoStream" uid="uid://bdodipa8264om" path="res://classroom-wallpaperwaifu-com.ogv" id="1_28flt"]
+[ext_resource type="Script" uid="uid://srq0bpe7pnb6" path="res://Scenes/button.gd" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://djinl3edt3n6f" path="res://𝒕𝒉𝒆 𝒘𝒊𝒏𝒅 𝒓𝒊𝒔𝒆𝒔.jpg" id="2_48xlc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_28flt"]
+font_size = 21
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 55
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Node2D" unique_id=2089921472]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=374933798]
+offset_right = 144.48622
+offset_bottom = 80.451126
+scale = Vector2(7.98, 7.98)
+stream = ExtResource("1_28flt")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Label" type="Label" parent="." unique_id=1976902346]
+texture_filter = 1
+offset_left = 217.99998
+offset_top = 99.99999
+offset_right = 370.0
+offset_bottom = 130.0
+scale = Vector2(4.64, 4.64)
+text = "Pulpen gw woi!"
+label_settings = SubResource("LabelSettings_28flt")
+
+[node name="Button" type="Button" parent="." unique_id=937557174]
+texture_filter = 1
+offset_left = 475.00003
+offset_top = 337.00003
+offset_right = 527.0
+offset_bottom = 368.00003
+scale = Vector2(3.63, 3.63)
+text = "Mulai"
+script = ExtResource("2_1ehe0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1544359229]
+
+[node name="𝒕𝒉𝒆𝒘𝒊𝒏𝒅𝒓𝒊𝒔𝒆𝒔" type="Sprite2D" parent="." unique_id=926201324]
+position = Vector2(475, 537.5)
+scale = Vector2(0.728261, 0.107337)
+texture = ExtResource("2_48xlc")
